@@ -1,4 +1,5 @@
 package com.example.androiddeveloper.model
 
-data class dataMenu(val isiMenu: List<isiMenu>)
-data class isiMenu(val label: String)
+import com.google.gson.JsonElement
+
+data class dataMenu(val key: String, val value: JsonElement)

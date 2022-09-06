@@ -3,6 +3,7 @@ package com.example.androiddeveloper.network
 import com.example.androiddeveloper.LoginRequest
 import com.example.androiddeveloper.LoginResponse
 import com.example.androiddeveloper.model.dataMenu
+import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
@@ -15,7 +16,7 @@ interface UserApi {
 
     //Menu
     @GET("web/test_programmer.php")
-    fun getAllMenu() : Call<List<dataMenu>>
+    fun getAllMenu() : Call<JsonObject>
 
     companion object {
         fun getApi(): UserApi? {

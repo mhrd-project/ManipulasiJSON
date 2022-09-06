@@ -25,8 +25,11 @@ class MainAdapter :
     }
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
         val movie = dataMenu[position]
-        holder.view.name.text = movie.isiMenu.toString()
-        Log.d("ngetes", movie.isiMenu.toString())
+        holder.view.name.text = movie.value.asJsonObject.get("label").toString()
+        System.out.println("date : " + movie.key)
+        System.out.println("label : " + movie.value.asJsonObject.get("label").toString())
+        System.out.println("nb_visits : " + movie.value.asJsonObject.get("nb_visits").toString())
+        System.out.println("status : " + "gaonok field e")
 //        Glide.with(holder.itemView.context).load(movie.imageUrl).into(holder.view.imageview)
     }
     override fun getItemCount(): Int {
